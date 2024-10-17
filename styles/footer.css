@@ -13,9 +13,22 @@
     gap: 10px;
 }
 
+#page-list > li {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #24CEAA;
+    color: black;
+}
+
 #page-list > li:hover {
     cursor: pointer;
-    text-decoration: underline;
+    border-color: black;
+    color: black;
+    background-color: #F9BA6F;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 200ms;
 }
 
 #contato {
