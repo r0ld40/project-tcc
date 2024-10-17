@@ -1,4 +1,3 @@
-// Função para buscar os dados do JSON
 const array = async () => {
     try {
         const response = await fetch("./Livros.json");
@@ -10,9 +9,8 @@ const array = async () => {
     } catch (error) {
         console.error("Erro ao carregar JSON:", error);
     }
-};
+}; // Puxa a Lista de livros
 
-// Carregar e exibir os livros após o DOM ser carregado
 document.addEventListener('DOMContentLoaded', async () => {
     const divLivros = document.getElementById('divLivros');
 
@@ -57,8 +55,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         divLivros.innerText = 'Erro ao carregar os livros.';
         console.error(error);
     }
-});
-
-
-// Mostra o array no console
-array().then((data) => console.log(data));
+}); // Carrega os Livros em "Livros mais populares"
