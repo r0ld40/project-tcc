@@ -1,0 +1,74 @@
+#footer-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#page-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#page-list > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#redes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#redes-list > li {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #24CEAA;
+    color: black;
+}
+
+#redes-list > li:hover {
+    cursor: pointer;
+    border-color: black;
+    color: black;
+    background-color: #F9BA6F;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+.link, .link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link {
+    border: 2px solid;
+    border-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #24CEAA;
+}
+
+.link:hover {
+    border-color: black;
+    color: black;
+    background-color: #F9BA6F;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
