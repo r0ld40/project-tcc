@@ -1,17 +1,35 @@
 #section-container {
-    height: 100%;
+    height: auto;
     margin: 25px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
     justify-content: space-between;
     font-weight: 600;
+    gap: 35px;
+}
+
+#divImagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #divLivros {
-    width: 70%;
+    width: 90%;
     height: 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#divEbooks {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
