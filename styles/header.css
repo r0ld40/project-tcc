@@ -4,7 +4,7 @@
     border: none; 
     cursor: pointer;
     position: absolute;
-    right: 50px;
+    right: 20px;
 }
 
 #perfil img {
@@ -26,8 +26,7 @@
 }
 
 #logo > img {
-    width: 60vh;
-    height: 20vh;
+    min-width: 30%
 }
 
 #search-bar {
@@ -59,11 +58,11 @@
     opacity: 0.7;
 }
 
-#livros-buttons > #livros {
+#livros-buttons > a > #livros {
     background-color: #7da2cb;
 }
 
-#livros-buttons > #lista-desejos {
+#livros-buttons > a > #lista-desejos {
     background-color: #F9BA6F;
 }
 
@@ -78,7 +77,6 @@
 }
 
 #search > button > #lupa {
-    width: 35px;
-    height: 30px;
+    width: 30px;
     cursor: pointer;
 }

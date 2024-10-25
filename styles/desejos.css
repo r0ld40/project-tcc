@@ -1,0 +1,50 @@
+#body {
+    background-color: lightgray;
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section {
+    position: relative;
+    background-color: white;
+    border: 2px solid;
+    padding: 20px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+#back {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+}
+
+#container {
+    width: 90%;
+}
+
+#top {
+    border: 1px solid;
+    font-weight: 900;
+    width: 80%;
+    padding: 5px;
+    background-color: pink;
+}
+
+#divDesejos {
+    border: 1px solid;
+    padding: 30px 75px;
+    min-height: 50vh;
+    display: flex;
+    background-color: lightgoldenrodyellow;
+}

@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/section.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/section.css">
+    <title>Litaratura da Diversidade</title>
 </head>
 <body>
     <header>
         <div id="logo">
-            <img src="./assets/litaratura-da-diversidade.jpeg" alt="litaratura-da-diversidade">
+            <img src="../assets/litaratura-da-diversidade.jpeg" alt="litaratura-da-diversidade">
             <button id="perfil">
-                <img src="./assets/perfil.png" alt="perfil">
+                <img src="../assets/perfil.png" alt="perfil">
             </button>
         </div>
         <div id="search-bar">
             <div id="livros-buttons">
-                <button id="livros">Livros</button>
-                <button id="lista-desejos">Lista de desejos</button>
+                <a href="./heartstopper.html">
+                    <button id="livros">Livros</button>
+                </a>
+                <a href="./listadesejos.html">
+                    <button id="lista-desejos">Lista de desejos</button>
+                </a>
             </div>
             <form action="" id="search">
                 <input type="text">
                 <button >
-                    <img src="./assets/lupa.png" alt="lupa" id="lupa">
+                    <img src="../assets/lupa.png" alt="lupa" id="lupa">
                 </button> 
             </form>
         </div>
@@ -33,7 +37,9 @@
     <section>
         <div id="section-container">
             <div id="divImagem">
-                <img src="assets/pag-sec.png" alt="pag-sec" width="75%">
+                <a href="./heartstopper.html" id="divImagem">
+                    <img src="../assets/pag-sec.png" alt="pag-sec" width="75%">
+                </a>
             </div>
             Livros Populares:
             <div id="divLivros"></div>
@@ -67,5 +73,5 @@
         </div>
     </footer>
 </body>
-<script src="index.js"></script>
+<script src="../js/index.js"></script>
 </html>

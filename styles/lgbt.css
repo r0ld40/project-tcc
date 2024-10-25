@@ -1,0 +1,21 @@
+#section {
+    background-color: #ACD9DF;
+}
+
+#divImagem {
+    background-color: #F5F6F2;
+    width: 100%;
+}
+
+#divLGBT {
+    margin-top: 30px;
+}
+
+#divButtons {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}

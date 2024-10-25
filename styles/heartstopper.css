@@ -1,0 +1,16 @@
+#divHearts {
+    margin-top: 30px;
+}
+
+#section {
+    background-color: #A175AA;
+}
+
+#divButtons {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}

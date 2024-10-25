@@ -1,3 +1,26 @@
+p {
+    width: 100%;
+    text-align: start;
+}
+
+h3 {
+    margin: 15px 0px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #24CEAA;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #F9BA6F;
+}
+
 #section-container {
     height: auto;
     margin: 25px 0px;
@@ -6,7 +29,6 @@
     align-items: center;
     justify-items: center;
     justify-content: space-between;
-    font-weight: 600;
     gap: 35px;
 }
 
@@ -17,7 +39,7 @@
 }
 
 #divLivros {
-    width: 90%;
+    width: 100%;
     height: 40%;
     display: flex;
     justify-content: center;
@@ -26,7 +48,7 @@
 }
 
 #divEbooks {
-    width: 90%;
+    width: 100%;
     height: 40%;
     display: flex;
     justify-content: center;

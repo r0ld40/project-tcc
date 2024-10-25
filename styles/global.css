@@ -26,7 +26,6 @@ section {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    padding: 15px 0px;
 }
 
 footer {
