@@ -31,6 +31,14 @@
     transition-duration: 200ms;
 }
 
+#page-list > li > a {
+    text-decoration: none;
+}
+
+#page-list > li > a:visited {
+    color: black;
+}
+
 #contato {
     display: flex;
     flex-direction: column;

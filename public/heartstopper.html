@@ -6,9 +6,35 @@
     <link rel="stylesheet" href="../styles/section.css">
     <link rel="stylesheet" href="../styles/heartstopper.css">
     <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <title>Heartstopper</title>
 </head>
 <body>
+    <header>
+        <div id="logo">
+            <img src="../assets/litaratura-da-diversidade.jpeg" alt="litaratura-da-diversidade">
+            <button id="perfil">
+                <img src="../assets/perfil.png" alt="perfil">
+            </button>
+        </div>
+        <div id="search-bar">
+            <div id="livros-buttons">
+                <a href="./heartstopper.html">
+                    <button id="livros">Livros</button>
+                </a>
+                <a href="./listadesejos.html">
+                    <button id="lista-desejos">Lista de desejos</button>
+                </a>
+            </div>
+            <form action="" id="search">
+                <input type="text">
+                <button >
+                    <img src="../assets/lupa.png" alt="lupa" id="lupa">
+                </button> 
+            </form>
+        </div>
+    </header>
     <section id="section">
         <div id="divImagem">
             <img src="../assets/pag-sec.png" width="70%" />
@@ -28,6 +54,39 @@
             </a>
         </div>
     </section>
+    <footer>
+        <div id="footer-container">
+            <div>Logo</div>
+            <ul id="page-list">
+                <li>
+                    <a href="./index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./heartstopper.html">Livros</a>
+                </li>
+                <li>
+                    <a href="./listadesejos.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="./listadesejos.html">Lista de Desejos</a>
+                </li>
+            </ul>
+            <div id="contato">
+                Duvidas?
+                <a href="" class="link">
+                    Fale conosco
+                </a>
+            </div>
+            <div id="contato">
+                Minhas Redes:
+                <ul id="redes-list">
+                    <li>WhatsApp</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="../js/heartstoppper.js"></script>
 </html>

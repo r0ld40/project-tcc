@@ -62,7 +62,7 @@ function renderItems(items, containerId) {
     items.forEach((item) => {
         const div = document.createElement('div');
         div.style.width = '250px';
-        div.style.height = '400px';
+        div.style.height = '460px';
         div.style.border = '1px solid';
         div.style.padding = '10px';
         div.style.textAlign = 'center';
@@ -70,7 +70,7 @@ function renderItems(items, containerId) {
         div.style.flexDirection = 'column';
         div.style.justifyContent = 'space-between';
         div.style.alignItems = 'center';
-        div.style.backgroundColor = 'white';
+        div.style.backgroundColor = 'lightblue';
 
         div.innerHTML = `
             <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
@@ -82,12 +82,25 @@ function renderItems(items, containerId) {
                     <p>Preço: R$ ${item.preco.replace('.', ',')}</p>
                 </div>
             </div>
-            <button onclick='AddToCart(${JSON.stringify(item)})' style="margin-top: 25px;">
+            <button onclick='AddToCart(${JSON.stringify(item)})' style="margin-top: 25px; width:80%;">
                 <img src="../assets/cart.png" alt="cart" style="width:25px; height:25px">
             </button>
+            <a href="../public/product.html" style="width: 100%;">
+                <button onclick='knowMore(${JSON.stringify(item)})' style="margin-top: 10px; width:80%; height:45px; font-weight: bold; font-size: 18px;">
+                    Saiba mais
+                </button>
+            </a>
         `;
         container.appendChild(div);
     });
+}
+
+function knowMore(item) {
+    localStorage.setItem('product', JSON.stringify(item));
+
+    let product = JSON.parse(localStorage.getItem('product')) || [];
+
+    console.log(product)
 }
 
 function AddToCart(item) {
@@ -99,6 +112,7 @@ function AddToCart(item) {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
     console.log(cart)
+    window.alert("Seu item foi adicionado com sucesso a sua lista de desejos!")
 }
 
 function applyResponsiveLayout() {

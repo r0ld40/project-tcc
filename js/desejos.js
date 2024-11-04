@@ -15,7 +15,7 @@ function renderItems(items, containerId) {
     items.forEach((item) => {
         const div = document.createElement('div');
         div.style.width = '250px';
-        div.style.height = '400px';
+        div.style.height = '460px';
         div.style.border = '1px solid';
         div.style.padding = '10px';
         div.style.textAlign = 'center';
@@ -34,19 +34,33 @@ function renderItems(items, containerId) {
                     <p>Preço: R$ ${item.preco.replace('.', ',')}</p>
                 </div>
             </div>
-            <button onclick='deleteItem("${item.id}")' style="margin-top: 25px;">
-                <img src="../assets/delete.png" alt="delete" style="width:25px; height:25px">
+            <button onclick='AddToCart(${JSON.stringify(item)})' style="margin-top: 25px; width:80%;">
+                <img src="../assets/cart.png" alt="cart" style="width:25px; height:25px">
             </button>
+            <a href="../public/product.html" style="width: 100%;">
+                <button onclick='knowMore(${JSON.stringify(item)})' style="margin-top: 10px; width:80%; height:45px; font-weight: bold; font-size: 18px;">
+                    Saiba mais
+                </button>
+            </a>
         `;
         container.appendChild(div);
     });
 } // Renderiza a lista de desejos
+
+function knowMore(item) {
+    localStorage.setItem('product', JSON.stringify(item));
+
+    let product = JSON.parse(localStorage.getItem('product')) || [];
+
+    console.log(product)
+}
 
 function deleteItem(itemId) {
     let cart = getCartItems();
     cart = cart.filter(item => item.id !== itemId); // Remove o item pelo ID
     saveCartItems(cart); // Atualiza o localStorage
     renderItems(cart, 'divDesejos'); // Renderiza a lista
+    window.alert("Seu item foi removido com sucesso da sua lista de desejos!")
 } // Exclui um item do carrinho
 
 function applyResponsiveLayout() {
