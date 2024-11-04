@@ -30,6 +30,9 @@ function renderItems(product, containerId) {
             <div style="width: 50%; height: 100%; font-size: 20px; display: flex; justify-content: center; align-items: center;">
                 <div style="width: 500px; height: 500px; border: 1px solid; padding: 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
                     <h3 style="font-size: 30px;">${product.nome}</h3>
+                    <p style="width: 100%; display: flex; justify-content: center; font-weight: bold;">
+                        ${product.texto}
+                    </p>
                     <div style="width: 100%; display: flex; flex-direction: column; gap: 15px;">
                         <p>Autor: ${product.autor}</p>
                         <p>Gênero: ${product.genero}</p>

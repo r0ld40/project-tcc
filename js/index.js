@@ -1,6 +1,7 @@
 const allLivros = [
     {
         "nome": "Os dois morrem no final",
+        "texto": "exemplo",
         "autor": "Adam Silvera",
         "classificacao": "4.7",
         "id": "1",
@@ -259,6 +260,57 @@ const Ebooks = [
     },
 ];
 
+const formulario = document.getElementById('search');
+
+formulario.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const input = document.getElementById('input').value.trim();
+  const divResultados = document.getElementById('div-resultados');
+
+  if (input === '') {
+    divResultados.innerHTML = "Por favor, preencha todos os campos.";
+    return;
+  }
+
+  const livrosEncontrados = allLivros.filter(livro => 
+    livro.nome.toLowerCase().includes(input.toLowerCase())
+  );
+
+  const div = document.getElementById('resul');
+
+  if (livrosEncontrados.length > 0) {
+
+    div.innerHTML = `<p style="margin: 20px;">Resultados para "${input}":</p>`;
+
+    divResultados.innerHTML += livrosEncontrados.map(livro => `
+        <div style="width: 250px; height: 460px; border: 1px solid; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: lightblue;">
+            <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+                <img src="${livro.capa}" alt="${livro.nome}" style="width:150px; height:200px;">
+                <h3>${livro.nome}</h3>
+                <div style="width: 240px;">
+                    <p>Autor: ${livro.autor}</p>
+                    <p>Gênero: ${livro.genero}</p>
+                    <p>Preço: R$ ${livro.preco.replace('.', ',')}</p>
+                </div>
+            </div>
+            <button onclick='AddToCart(${JSON.stringify(livro)})' style="margin-top: 25px; width:80%;">
+                <img src="../assets/cart.png" alt="cart" style="width:25px; height:25px">
+            </button>
+            <a href="../public/product.html" style="width: 100%; display: flex; justify-content: center;">
+                <button onclick='knowMore(${JSON.stringify(livro)})' style="margin-top: 10px; width:80%; height:45px; font-weight: bold; font-size: 18px; color: black;">
+                    Saiba mais
+                </button>
+            </a>
+        </div>
+    `).join('');
+  } else {
+    div.innerHTML = "<p style='margin: 20px;'>Nenhum livro encontrado.</p>";
+  }
+
+  formulario.reset();
+});
+
 function renderItems(items, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = '';
@@ -322,7 +374,7 @@ function AddToCart(item) {
 function applyResponsiveLayout() {
     const columns = window.innerWidth < 930 ? 1 : 3;
 
-    ['divLivros', 'divEbooks'].forEach((id) => {
+    ['divLivros', 'divEbooks', 'div-resultados'].forEach((id) => {
         const container = document.getElementById(id);
         if (container) {
             container.style.display = 'grid';

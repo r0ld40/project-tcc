@@ -1,6 +1,7 @@
 const Hearts = [
     {
         "nome": "Heartstopper (VOL.1)",
+        "texto": "Livro sobre a HeartsTopper",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "9",
@@ -10,6 +11,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.2)",
+        "texto": "Livro sobre a HeartsTopper",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "10",
@@ -19,6 +21,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.3)",
+        "texto": "Livro sobre a HeartsTopper atualiza ai",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "11",
