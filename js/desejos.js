@@ -34,8 +34,8 @@ function renderItems(items, containerId) {
                     <p>Preço: R$ ${item.preco.replace('.', ',')}</p>
                 </div>
             </div>
-            <button onclick='AddToCart(${JSON.stringify(item)})' style="margin-top: 25px; width:80%;">
-                <img src="../assets/cart.png" alt="cart" style="width:25px; height:25px">
+            <button onclick='deleteItem("${item.id}")' style="margin-top: 25px; width: 80%; height: 30px;">
+                <img src="../assets/delete.png" alt="delete" style="width:25px; height:25px">
             </button>
             <a href="../public/product.html" style="width: 100%;">
                 <button onclick='knowMore(${JSON.stringify(item)})' style="margin-top: 10px; width:80%; height:45px; font-weight: bold; font-size: 18px;">
