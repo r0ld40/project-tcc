@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/perfil.css">
+    <title>Login/Cadastro</title>
+</head>
+<body>
+    <section>   
+        <form id="form">
+            <a href="./index.html">
+                <img src="../assets/home.png" alt="back" id="back" width="25px">
+            </a>    
+            <h1>Login</h1>
+            <div class="divLabel">
+                <label for="email">Email:</label>
+                <input type="email" id="email"> 
+            </div>
+            <di class="divLabel">
+                <label for="password">Senha:</label>
+                <input type="password" id="password">
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Não possui uma conta? <button onclick="cadastro()" id="cadastro">Cadastre-se</button></p>
+    </section>
+</body>
+<script src="../js/perfil.js"></script>
+</html>

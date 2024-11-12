@@ -1,7 +1,7 @@
 const Hearts = [
     {
         "nome": "Heartstopper (VOL.1)",
-        "texto": "Livro sobre a HeartsTopper",
+        "texto": "Charlie Spring e Nick Nelson não têm quase nada em comum. Charlie é um aluno dedicado e bastante inseguro por conta do bullying que sofre no colégio desde que se assumiu gay. Já Nick é superpopular, especialmente querido por ser um ótimo jogador de rúgbi. Quando os dois passam a sentar um ao lado do outro toda manhã, uma amizade intensa se desenvolve, e eles ficam cada vez mais próximos.",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "9",
@@ -11,7 +11,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.2)",
-        "texto": "Livro sobre a HeartsTopper",
+        "texto": "No segundo volume da série Heartstopper, Charlie e Nick precisam entender o que um beijo significa para a relação dos dois — e, principalmente, para eles mesmos. Charlie e Nick são melhores amigos, mas tudo muda depois que eles se beijam em uma festa. Charlie acredita que cometeu um grande erro e arruinou a amizade dos dois para sempre, e Nick está mais confuso do que nunca.",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "10",
@@ -21,7 +21,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.3)",
-        "texto": "Livro sobre a HeartsTopper atualiza ai",
+        "texto": "Depois de entenderem o que sentiam um pelo outro, Charlie e Nick se tornaram oficialmente namorados, e cada dia é uma nova oportunidade para se conhecerem um pouco mais. Mas nem tudo é fácil, principalmente quando se trata de se assumir enquanto casal para o mundo.",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "11",
@@ -31,6 +31,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.4)",
+        "texto": "Charlie e Nick já não precisam esconder de ninguém no colégio que estão namorando, e agora, mais do que nunca, Charlie quer finalmente dizer “Eu te amo”. O que parece um gesto simples se torna bem complicado quando sua ansiedade o faz questionar se Nick se sente da mesma forma…",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "12",
@@ -40,6 +41,7 @@ const Hearts = [
     },
     {
         "nome": "Heartstopper (VOL.5)",
+        "texto": "Nick e Charlie estão mais apaixonados do que nunca. Eles já se declararam um para o outro, começaram a namorar, e Charlie está quase convencendo sua mãe a deixá-lo dormir na casa de Nick… Mas com a partida de Nick para a universidade no próximo ano, será que tudo está prestes a mudar?",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "13",
@@ -49,6 +51,7 @@ const Hearts = [
     },
     {
         "nome": "Nick e Charlie: Uma novela de Heartstopper",
+        "texto": "Todo mundo sabe que Nick e Charlie são inseparáveis. Entre tardes jogando videogame, noites de filmes e conversas infinitas, não há nada que possa abalar o sentimento que um tem pelo outro.Com a partida de Nick para a universidade se aproximando, Charlie fica cada vez mais inseguro, afinal todos dizem que o primeiro amor quase nunca dura para sempre…",
         "autor": "Alice Oseman",
         "classificacao": "4.9",
         "id": "14",
