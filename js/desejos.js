@@ -1,5 +1,6 @@
 function getCartItems() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const perfil = JSON.parse(localStorage.getItem('perfil')) || [];
+    const cart = perfil.cart || [];
     return cart;
 } // Puxa os items salvos no localStorage
 
@@ -64,7 +65,7 @@ function deleteItem(itemId) {
 } // Exclui um item do carrinho
 
 function applyResponsiveLayout() {
-    const columns = window.innerWidth < 930 ? 1 : 4;
+    const columns = window.innerWidth < 930 ? 1 : 3;
     const container = document.getElementById('divDesejos');
     container.style.display = 'grid';
     container.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;

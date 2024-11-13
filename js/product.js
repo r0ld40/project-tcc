@@ -284,15 +284,41 @@ function renderItems(product, containerId) {
 } // Renderiza a lista de desejos
 
 function AddToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    const exists = cart.find(cartItem => cartItem.id === item.id);
-    if (!exists) {
-        cart.push(item);
-        localStorage.setItem('cart', JSON.stringify(cart));
+    let perfil = JSON.parse(localStorage.getItem('perfil')) || {};
+    let DataBank = JSON.parse(localStorage.getItem('DataBank')) || [];
+
+    console.log(perfil);
+
+    if (!perfil.id === undefined) {
+        alert('Por favor, realize o login antes de adicionar itens ao carrinho.');
     }
-    console.log("Carrinho:",cart)
-    window.alert("Seu item foi adicionado com sucesso a sua lista de desejos!")
+    
+    if (!perfil.cart) {
+        perfil.cart = [];
+    }
+
+    try {
+        if (!DataBank[perfil.id]) {
+            DataBank[perfil.id] = { ...perfil, cart: [] };
+        }
+
+        const itemExistsInPerfilCart = perfil.cart.some(cartItem => cartItem.id === item.id);
+        const itemExistsInDataBankCart = DataBank[perfil.id].cart.some(cartItem => cartItem.id === item.id);
+
+        if (!itemExistsInPerfilCart) {
+            perfil.cart.push(item);
+        }
+        if (!itemExistsInDataBankCart) {
+            DataBank[perfil.id].cart.push(item);
+        }
+
+        localStorage.setItem('perfil', JSON.stringify(perfil));
+        localStorage.setItem('DataBank', JSON.stringify(DataBank));
+        
+        window.alert("Seu item foi adicionado com sucesso a sua lista de desejos!");
+    } catch (error) {
+        console.error('Erro ao adicionar item ao carrinho:', error);
+    }
 }
 
 function applyResponsiveLayout() {
