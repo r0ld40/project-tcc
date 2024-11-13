@@ -1,11 +1,18 @@
 function getCartItems() {
-    const perfil = JSON.parse(localStorage.getItem('perfil')) || [];
+    const perfil = JSON.parse(localStorage.getItem('perfil')) || {};
     const cart = perfil.cart || [];
     return cart;
 } // Puxa os items salvos no localStorage
 
 function saveCartItems(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    const perfil = JSON.parse(localStorage.getItem('perfil')) || {};
+    const DataBank = JSON.parse(localStorage.getItem('DataBank')) || [];
+
+    perfil.cart = cart;
+    DataBank[perfil.id].cart = cart;
+
+    localStorage.setItem('perfil', JSON.stringify(perfil));
+    localStorage.setItem('DataBank', JSON.stringify(DataBank));
 } // salva os itens no localStorage
 
 function renderItems(items, containerId) {

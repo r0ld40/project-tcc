@@ -369,8 +369,9 @@ function AddToCart(item) {
 
     console.log(perfil);
 
-    if (!perfil.id === undefined) {
+    if (perfil.id === undefined) {
         alert('Por favor, realize o login antes de adicionar itens ao carrinho.');
+        return
     }
     
     if (!perfil.cart) {
